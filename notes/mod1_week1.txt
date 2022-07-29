@@ -1,0 +1,319 @@
+VSCode Lab:
+https://www.coursera.org/learn/introduction-to-front-end-development/supplement/8wbWb/visual-studio-code-on-coursera
+
+
+
+===================================================================================
+
+A network is made up of at least two devices that connect and communicate via a wired or wireless connection. One network switch can connect to another switch to link two networks.
+
+A server is a computer that runs applications and services, ranging from websites to instant messaging. You have just learned about a web server which is a specific type of server
+
+Web servers have to be able to handle high volumes of web requests.
+
+Web servers have multiple functions and this is just one of them. They can also function as website storage and administration and manage emails.
+
+Web servers have multiple functions and this is just two of them. They can also handle security and manage emails.
+
+A Data center provide storage and power for web servers.
+
+
+### Additional Resources =====================================================
+
+Learn more​
+Here is a list of resources that may be helpful as you continue your learning journey.
+
+What is a Web Server? (NGINX)
+https://www.nginx.com/resources/glossary/web-server/
+
+What is a Web Browser? (Mozilla)
+https://www.mozilla.org/en-US/firefox/browsers/what-is-a-browser/
+
+Who invented the Internet? And why? (Kurzgesagt) 
+https://youtu.be/21eFwbb48sE
+
+What is Cloud Computing? (Amazon)
+https://youtu.be/mxT233EdY5c
+
+Browser Engines (Wikipedia)
+https://en.wikipedia.org/wiki/Browser_engine
+
+=============================================================================
+
+
+Every compute on network is assiged an IP address that contains four octet.
+IpV4 = 4 octets 192.0.0.235
+IPV6 => contains eight groups of hexadecimal digits separated by colon.
+4325:0a00:1567:0200:ff00:0042:8329
+
+Data across the n/w is sent in the form of series of IP packets ka Datagrams.
+IP packets contains 2 sections: Header and Data(aka payload)
+IP packet contains Destination IP address and source IP address in Header section. 
+Payload contains data and other protocols.
+
+ The payload part of IP packets supports multiple protocols to make sure that information arrives as expected. Two of these are Transmission Control Protocol (TCP) and User Datagram Protocol (UDP). TCP is used for data that must arrive correctly and in order. This is because TCP can deal with data packets arriving out of order, becoming damaged or corrupted, or dropped or lost albeit at the cost of a small delay.
+
+It is possible that packet reaches out of order;become corrupt or get dropped or lost.
+2 Most common protocols: 
+    - TCP Transmission Control Protocol: 
+        solves packet problems: out of order;become corrupt or get dropped or lost.
+        used for sending the data that must reach in order
+        Eg. Text or Image file.
+
+    - UDP User Datagram Protocol: 
+        solves corrupt packet issue
+        used for sending data that can tolerate some data loss
+        Eg. Voice calls or Live video streaming
+    
+Both of these protocols contain payloads that further contains protocols inside of them.
+
+
+
+HTTP is the protocol to transfer web resources like HTML docs, images, styles and other files.
+It is a request-response based protocol.
+THe web-browser or client sends an HTTP request to a webserver and the webserver sends
+the HTTP response back to the browser.
+------------------------------------------------------------------------
+A. HTTP Request:
+HTTP Request consists of a 1. Method, 2. Path, 3. Version and 4. Headers.
+
+1. HTTP Method:
+HTTP method describes the type of action that the client was to perform.
+
+The most commonly used HTTP methods are GET POST PUT and DELETE.
+GET -retrieve
+POST -send
+PUT -update
+DELETE-remove
+
+2. Path
+Path = location of web-resource on the server
+
+4. Headers
+Contain additional information about the request. 
+(Eg. Host, Accept-Language) 
+
+------------------------------------------------------------------------
+B. HTTP Response:
+Has similar format as HTTP Request
+Following Header, reponse will optionally contain a Message body 
+consisting of response contents like HTML documents, Image file etc.
+
+C. HTTP status code:
+Are contained within header, indicate if HTTP request was succesfully completed.
+Status code range: 100 to 599 and are grouped by purpose.
+
+Status code:
+100 - Client should continue the requst or ignore the response if 
+        the request is already finished.
+200 - Status ok
+
+301 - Requested Web resource is moved permanently
+302 - Temporary redirection to temporary alternative path of the requested resource.
+
+Client Error Responses(400-499):
+Means the request contains bad syntax or content and cannot be processed by 
+web server.
+
+400 - bad data submitted to web server
+401- user must log into the a/c before the request can be processed
+403- request is valid but server is refusing to process it; as 
+     user doesnt have sufficient permission to execute an action
+     in web application.
+404- resource not found on the web server.
+
+Client Error Responses (500-599):
+Failure occured on the web server while processing request.
+500:Internal Server Error - 
+
+
+HTTPS is secured as the messages are encrypted and exchanged.
+     
+
+Other Internet Protocols:
+
+Dynamic Host Configuration Protocol (DHCP)
+    - assigns an IP address to your computer
+    -Your computer communicates over User Datagram Protocol (UDP) using the protocol with a type of server called a DHCP server. The server keeps track of computers on the network and their IP addresses. It will assign your computer an IP address and respond over the protocol to let it know which IP address to use. Once your computer has an IP address, it can communicate with other computers on the network.
+
+
+Domain Name System Protocol (DNS)
+    - provides IP address associated with the domain name to your computer.
+
+Internet Message Access Protocol (IMAP)
+    - downloads emails and manage your mailbox on the server
+
+Simple Mail Transfer Protocol (SMTP)
+    used to send and receive emails
+
+File Transfer Protocol (FTP)
+    - allows you to list, send, receive and delete files on a server. 
+    - Your server must run an FTP Server and you will need an FTP Client on your local machine.
+
+Post Office Protocol (POP)
+  -The main difference in using POP instead of IMAP is that POP will delete the emails on the server once they have been downloaded to your local device. 
+  - no longer commonly used in email clients
+  - developers often use for email automation 
+
+Secure Shell Protocol (SSH)
+    allows client to log in and interact with the computer remotely. 
+
+SSH File Transfer Protocol (SFTP)
+    - The data is transmitted insecurely when using the File Transfer Protocol.
+    - alternatively called the Secure File Transfer Protocol
+    -  Most FTP clients also support the SFTP protocol.
+
+
+
+Website: 
+Collection of interlinked web-pages.
+All web pgs lie under same domain name.
+More informative than web app.
+Eg. Company website
+
+Web application:
+More interctive, personalized and dynamicly updated content than a website.
+Eg. Online Food Delivery app.
+
+
+### Frameworks and Libraries:
+
+You are developing solutions but you need to save some time and build faster. 
+Well, someone has already figured out many key development processes 
+and they're contained in frameworks and libraries
+
+Help in fast development, fewer errors, and are time saving.
+
+Eg. A carpenter will use a hammer build a furniture; instead of building hammer itself.
+
+Developers use pre-defined libraries and frameworks in Appliation Development Environment 
+to speed up the development process.
+Type:
+- Open source
+- Proprietary
+
+Libraries:
+    - are reusable pieces of code
+    - provide specific functionality
+    - hence save time
+
+Eg Intead of re-developing validation to check valid email, use libraries to validate it.
+
+Framework:
+    - provides structure for developers to build with.
+Eg. Express, Django, Spring, ASP.Net, Rails
+
+These frameworks handle functionality that is common to all web applications
+such as receiving http requests and sending HTTP responses.
+THe developer then add his own code that implements the functionality
+of the web application.
+
+Eg. Blueprint to build a chair will speed up chair production.
+
+Most frameworks use many libraries.
+These libraries can be used by your application.
+You application can use external libraries too.
+Frameworks are opinionated. Libraries are un-opinionated.
+
+Framework contains libraries.
+Framework calls your application.
+You application calls (ie, uses) libraries.
+
+
+Frameworks advantages:
+    - time saving
+    - enforce a structure of how code is written
+    - provide many best practices for app development
+Frameworks disadvantages:
+    - sometimes your way of development doesnt fit with structure of frameworks
+    - some libraries of framework may conflict with other libs you are reqd to use
+    and cause compatibility issues.
+    - replacing entire framework of your app is difficult.
+
+If an app is developed w/o a Framework and if libs are used instead;
+developer would need to decide the set of libs they wish to use 
+to achieve the functionality the must deliver.
+Also, ensure that selected libs work together.
+Replacing library with newer one is easy.
+
+### APIs
+
+APIs are developer friendly, easily accessible and a very valuable development tool.
+It is a set of functions and proedures that help creating apps that access the 
+feature or data of an OS, other app or other service.
+
+Commonly used APIs:
+    A. Browser or Web API
+    B. REST API
+    C. Sensor based API
+
+In s/w development APIs often bridge between different components or apps.
+Hence AKA middleware or gateway.
+
+    A. Browser or Web API
+    - built into browser itself
+    - extend the functionality of the browser by adding new services and are 
+    designed to simplify complex functions and provide easy syntax for 
+    building advance features.
+    Eg  1. DOM API:
+            converts HTML doc into tree of nodes that are represented as 
+            JavaScript objects.
+        2. Geolocation API:
+            returns coordinates of where the browser is located
+        3. Fetch API: fetches data
+        4. Canvas API: draws graphics
+        5. History API: Keeps history
+        6. Web storage API: works as client side storage.
+
+    
+
+    B. REST API: (Representational State Transfer)
+        - AKA web servers
+        - REST is a set of principles that help build highly efficient APIs.
+        - sends and receives data to and from centralized Database.
+        - we can query our own REST API or 3rd party ones
+        - use endpoints to specify how different resources can be accessed.
+            THe endpoint is built into the URL when accessing API.
+            One the endpoint is hit, the API performs whatever server side 
+            processing is needed to be built the response.
+            2 common forms of response are:
+                - full web pages
+                - a data based on javascript called JSON.
+    
+    C. Sensor based APIs:
+        - AKA IOT (Internet of Things)
+        - The sensors can communicate through API and track and respond to 
+        physical data.
+        Eg Philips hue smart light, Node bots.
+    
+IDE:
+Software for building applications.
+Text editor for writing code.
+Have features like syntax highlighting, error highlighting,
+auto-complete, intellisense, code-refactoring,
+bug-finding, collaborating with other developers, installing extensions.
+
+Refactoring: changing the structure of the code w/o changing
+its functionality.
+
+
+###Additional Resources==================================================================
+Learn more​
+Here is a list of resources that may be helpful as you continue your learning journey.
+
+HTTP Overview (Mozilla)
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview
+
+Introduction to Networking by Dr.Charles R Severance
+https://www.amazon.com/Introduction-Networking-How-Internet-Works/dp/1511654945/
+
+Chrome Developer Tools Overview (Google)
+https://developer.chrome.com/docs/devtools/overview/
+
+Firefox Developer Tools User Docs  (Mozilla)
+https://firefox-source-docs.mozilla.org/devtools-user/index.html
+
+Getting Started with Visual Studio Code  (Microsoft)
+https://code.visualstudio.com/docs
+
+==================================================================

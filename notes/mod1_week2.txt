@@ -1,0 +1,154 @@
+The HTML specification is maintained by W3C (World Wide Web Consortium).
+Whenever the html specification changes, a new version of HTML is standardized.
+
+IN img tags, text in alt attribute is read by assistive technologies like 
+screen-readers and other accessibilty tools.
+
+When your web browser receives an HTML page, it constructs it DOM to 
+represent it.
+Document Object Model is a tree structure, or Model of objects of HTML file
+Each object represents a single HTML element.
+We can use Javascript to access and modify DOM and make your 
+webpages dynamic.
+
+Eg 1. You can allow a preview of a video to play when the user hovers the 
+mouse over movie's poster.
+
+2. You can disable login button once the user has logged in.
+If login error occurred, the button would be re-enabled for login.
+
+3. You can add DOM objects to dynamically add new HTML content to 
+live web page. Eg. You can add error message to a form if user 
+inserts invalid data.
+
+4. DOM objects can also be deleted which will remove the corresponding 
+HTML displayed in the browser.
+Eg. In a ToDo list on a website, you can remove an item from a list when 
+the user clicks on it.
+
+NOTE: Another major use of JavaScript and the DOM is to animate the 
+HTML  elements. Many libraties aim to simplify animation. Eg. React library.
+
+
+Web Accessibility Initiative (WAI) was launched in 1997.
+Creator of World Wide Web: Tim Berners-Lee
+The power of web is in its universality.  Access by everyone regardless 
+of disability is an essential aspect.
+
+Web Accessibility aims to allow people with disabilites to understand,
+navigate and interact with websites.
+It not just includes visual disabilites, but infact all other disabilites too
+that affect interaction with websites.
+Eg. Audio-visual, cognitive and neurological, physical and speech disabilites.
+
+WAI developed specifications and supporting resources for accessibilty.
+These are considered international standards of web accessibility.
+
+Eg of accessibility tools:
+    1. Web Screen Readers softwares:  can read contents of websites and everything that is happening 
+    on the device.
+    Screen readers are used not only by blind and vision impaired users but also by those with 
+    reading or learning difficulties.
+
+    2. Speech recognition software: can turn spoken words into computer commands or dictate 
+    inputting text. This may be useful to people who are not able to use a mouse or 
+    keyboard due to physical or neurological disabilites.
+
+    3. Subtitles and video scripts: provide assistance to those with audio and 
+    visual disabilities.
+
+NOTE: It is a good practice to think of accessibility from the beginning of 
+a project. It is a lot harder to rework the project to be accessible later on.
+If you use the correct HTML structure and appropriate elements as a foundation,
+it will greatly improve accessibility.
+
+
+Eg. 
+Text which is not in proper tags like prargraph or heading tages, 
+makes it harder for assistive technologies to interact with the content.
+
+Using multiple line breaks <br/> to break up text and add space also 
+presents barrier to accessibility.
+
+WAI defines ARIA (Accessible Rich Internet Application) specification.
+ARIA specification defines various techniques to improve accessiblity for 
+complex web apps.
+
+
+
+Other Resources:
+
+HTML Elements Reference (Mozilla)
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+
+The Form Element (Mozilla)
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form
+
+What is the Document Object Model? (W3C)
+https://www.w3.org/TR/WD-DOM/introduction.html
+
+ARIA in HTML (W3C via Github)
+https://w3c.github.io/html-aria/
+
+ARIA Authoring Practices  (W3C)
+https://www.w3.org/TR/wai-aria-practices-1.2/
+
+
+=========================================================================
+
+
+### CSS 
+
+
+
+Text Transformation
+
+Text transformation is useful if you want to ensure the correct capitalization of the text content. In the example below, the CSS rule will change all text in paragraph elements to uppercase using the text-transform property:
+
+p { 
+  text-transform: uppercase;
+}​
+
+
+p { 
+  text-decoration: underline;
+}​
+
+p { 
+  text-decoration: underline red solid 5px;
+}​
+
+p { 
+  text-decoration-line: underline;
+  text-decoration-color: red;
+  text-decoration-style: solid;
+  text-decoration-thickness: 5px;
+}​
+
+
+The most common text-decoration-line values used are: underline, overline, line-through and none. None is the default value to use no text decoration.
+
+There are many styles available for the text-decoration-style  property;  solid,  double,  dotted,  dashed  and  wavy. The text-decoration-style property requires the decoration line to be defined. If the decoration style is not specified, solid will be used.
+
+
+The web browser's normal way of calculating the position of html elements on the screen
+is called Document Flow. Nearly all HTMl elements are organized into 2 categories:
+block or inline.
+NOTE: Each block element has a new line before and after.
+
+
+=======================================================================================
+Additional resources
+Learn more​
+Here is a list of resources that may be helpful as you continue your learning journey.
+
+CSS Reference (Mozilla)
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+
+HTML and CSS: Design and build websites by Jon Duckett
+https://www.amazon.com/HTML-CSS-Design-Build-Websites/dp/1118008189/
+
+CSS Definitive Guide  by Eric Meyer  
+https://www.amazon.com/CSS-Definitive-Guide-Visual-Presentation/dp/1449393195/
+
+=======================================================================================

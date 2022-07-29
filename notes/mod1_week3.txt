@@ -1,0 +1,276 @@
+A project could have 100s of dependencies and its tree.
+It will take a very long time to dowload, setup and configure all of them.
+How will you make sure you are using same versions the rest of your team is using?
+This is ensured by Package Manager.
+A Package Manager is a tool that automatically downloads and installs dependencies.
+dependencies AKA packages.
+
+A Package Manager also provides capability to publish your own packages.
+For each dependency you can specify a version,and the package manager will download it for you.
+
+The most common package manager for front end development is Node Package Manager.
+
+After all the dependencies are dowmloaded you need to include them in your HTML file.
+But adding all of them to your HTML file would take forever.
+This is where you use a bundling tool.
+
+The purpose of a bundler is to automatically combine the installed dependencies
+into a single file.
+If your bundle is significantly large, many bundles can split your dependencies 
+into multiple bundles.
+Eg Gulp, Webpack.
+
+
+Responsive design is a set of 3 practices that allows website to automatically 
+change its visuals according to screen resolutions. It is a combination of 
+3 techniques:
+1. Flexible grids
+2. Fluid images
+3. Media queries
+
+1. Flexible grids:
+    - Are made of columns.
+    - Spaces b/w columns are called gutter.
+    - And spaces before 1st column and after last columns are called margins.
+    - Instead of defining website element sizes based on pixels, flexible grids 
+      are defined in percentage values, allowing them to adjust depending on 
+      screen size.
+
+
+2. Fluid images:
+    - use max-width property eg max-width:100%. Hence they scale down in smaller screens.
+    - they dont either overflow in small screens or overstretch on large screens.
+
+3. Media queries:
+
+    They allows developers to query the display size, orientation and aspect ratio to
+    conditionally applt CSS rules.
+
+
+
+## Breakpoints and Grids: 
+Refer: lectures>mod1_9_breakpoints-grids
+
+Breakpoints:
+
+In responsive design, the pixel value specified is often referred to as 
+the breakpoint. A breakpoint is the point at which a website's content and 
+layout will adapt to provide the best possible user experience.
+A breakpoint can function in different ways across three different grids:
+    a. Fixed Grid
+    b. Fluid or Full-with grids
+    c. Hybrid grids
+
+a. Fixed Grid:
+    - has a fixed width columns and flexible margins.
+    - has fixed content width that doesnt change in a specific breakpoint range 
+    while the flexible margins occupy the remaining space on screen.
+
+b. Fluid or Full-with grids:
+    - has fluid width columns and fixed gutters and fixed side margins.
+    - has flexible content width that goes edge to edge as per screen size.
+    - columns either grow or shrink to adapt to the available space.
+
+c. Hybrid grids
+    - have both fluid width and fixed width components.
+     Many responsive design frameworks provide multiple CSS rules based on different device sizes to provide the best visual experience.
+
+
+ Bootstrap is the world's most Popular framework for building responsive mobile 1st Sites.
+
+
+Bootstrap provide:
+     1. Components: Small pieces of reusable code that allow you to build websites quickly.
+     2. pre-made set of CSS rules for building a responsive grid.
+    
+Bootstrap modifiers add a CSS class to change the visual style of components. You will use an infix to indicate the breakpoint in Bootstrap CSS rules. 
+
+
+Bootstraps grid system always starts with the container. The container contains pads and aligns your content. Its width is determined based on the current responsive breakpoint. You can add rows and inside each row you can add columns. 
+
+
+Bootstrap Official Website
+https://getbootstrap.com/
+
+Bootstrap 5 Foundations by Daniel Foreman  
+https://www.amazon.com/Bootstrap-Foundations-Mr-Daniel-Foreman/dp/B0948GRS8W/
+
+Responsive Web Design with HTML5 and CSS  by Ben Frain  
+https://www.amazon.com/Responsive-Web-Design-HTML5-CSS/dp/1839211563/
+
+Bootstrap Themes  
+https://themes.getbootstrap.com/
+
+============================================================================
+
+## React ###################################
+
+Web Server:
+Browser sends request to Web Server. Web Server finds the static content and sends 
+it as Response back to Browser. 
+
+Application Server:
+Browser sends request to Web Server. Web server send request to Application Server for processing.
+Application Server sends dynamic content to Web Server. Webserver sends this dynamic response to Browser.
+
+Dynamic content takes longer to be generated compared to static content.
+Application Server performs more complex processing than Web Server.
+It :
+- runs application logic
+- Communicates with Database
+- Checks user permissions
+
+To improve performance different application servers have specific purposes.
+
+Caching means webserver keep a copy of dynamic content. THis saved copy of 
+dynamic content is readily availablie on request. If the content is 
+requested again, the web server can immediately send the cached version instead of 
+passing the request back to Application Server.
+For each request from browser, web content checks if the content is already available
+in the cache. If not available, the dynamic content received from Application Server
+is first stored in the cache and then sent to the browser.
+After a period of time or with next user-interaction, the web server updates the 
+cache with the latest content.
+
+
+##SPA(Single Page Application):
+
+Provides a user-friendly , mobile friendly experience.
+(speedy and engaging experience for users.)
+Eg social n/w app, location app, messaging app
+
+
+Earlier, most web apps were implemented as multi-page apps.
+But this made traditional apps resource intensive to web server
+because sending entire web pages for every reuest consumes 
+excessive bandwidth and uses CPU time to generate dynamic pages.
+
+If your website is complex, the site browsing experience may appear 
+slow to users. It will be even slower if they have poor or limited 
+internet connection.
+To solve this probblem many web developers build their web apps 
+as SPA.
+
+In SPA there is only one HTML page that gets sent from server to browser.
+But that page will update its contents as your users interact with 
+your website.
+A SPA allows the user to interact with the website w/o the application 
+needing to download entire new web pages. Instead it rewrites the current 
+web page as the user interacts with it.
+
+As a result users get faster and more responsive browsing experience.
+
+When the user navigates to the web app in the browser, the web server returns
+the necessary resources to run the application.
+
+A SPA has two approaches to serving code and resources. 
+1. Bundling
+2. Lazy loading or code splitting. 
+
+
+1. Bundling:
+    When the browser requests the application, the server returns and loads all necessary HTML, CSS, and JavaScript immediately. 
+
+
+2. Lazy loading or code splitting:
+    The browser requests the application and the server returns only the minimum HTML, CSS, and JavaScript needed to load the application. Additional resources are downloaded as required. 
+    
+    For example, when a user navigates a specific section of the application, both approaches are valid. The choice depends on the size, complexity, and bandwidth requirements of the application. For instance, with the bundling approach, if your application is complex and has a lot of resources, your bundles will grow quite large and take a long time to download. You could end up with a site that is slower than a traditional web application. 
+
+    Eg.  Imagine you have a site dedicated to reviewing movies, people never know what to watch next so you decide to install a feature that randomly suggests the movie for a user. You create a web page that has a what to watch next button. You want to display a random movie name when the button is clicked. In a traditional website, when the button is clicked, the browser will send a post request to the web server. The web server returns a new web page containing the button and movie name. The web browser then renders the new page. In an SPA, when the button is clicked, the browser will send a post request to the web server. The web server will return a JSON object. The application reads the object and updates by displaying the text of the movie name. That's more efficient because the rest of the page remains as it was and it's content does not need to be sent by the server and rendered by the browser.
+
+
+    But what if you need to update the majority of the page to display a different form of content? Well, let's explore that scenario. Suppose you are building a web application that has two pages. One page shows the latest news and the other page shows the current user's profile page. Navigation bar at the top of the site contains a link to each page. In the traditional websites, when the user clicks a profile link, the web browser sends the request to the web server. The web server generates the entire HTML page and sends it back to the web browser. The web browser then renders a new web page. In a single-page application, different pages are broken into templates, also known as views. Each view will have HTML code that can be updated by the application. For instance, the profile page would have a username, a first name, and a last name. The web browser sends the request to the web server and the web server sends back a file called a JavaScript Object Notation or JSON object. This contains only the data to be displayed, such as the user's first name and last name, and the SPA will update the HTML. This is much smaller than sending an entire web page. The web browser then updates the web page by inserting the template with items replaced by the values in the JSON object. For your next website, consider whether its complexity suits a traditional multi-page application or would perform better as an SPA.
+
+    Remember that a single-page application has two methods of delivery resources. Delivering all resources immediately or delivering resources dynamically as required. If all resources are delivered when the application is loaded, the single-page application must include the views for every page on initial load. If resources are loaded dynamically, the single-page application requests the views as required and stores views in the browser for subsequent requests. Now you can compare some popular SPA websites to traditional ones and judge the performance difference for yourself.    
+
+
+## React:
+Ref:
+http://jsfiddle.net/2h6th4ju/ (an example of reconciliation in action.)
+
+https://reactjs.org/docs/jsx-in-depth.html (optional syntax extension, in case you prefer the readability of HTML to raw JavaScript.)
+
+https://reactjs.org/
+
+
+
+    React is focused on working with components, which makes it simple to build functional user interfaces
+    on web and mobile.
+    React is available from 2013. It is an open source library.
+    Developers use React to develop SPA and (mobile apps  using React native)
+
+    React is used for developing UI for an app.
+    React is used in conjuction with other JS libraries for considering navigation how the 
+    app will request data from the Web server.
+
+    React allows developers to write less code to create functionality.
+    This makes easier for maintaining the code in long term and simplifies testing.
+    We can use several tools with React to understand how React is running your code
+    and how you can improve performance.
+
+    React allows you to define componentsthat you can combine to build web app.
+    A component is small piece of UI like music player or photo gallery.
+
+    This component modelling allows you to do several things like developing and testing 
+    parts of their app in isolation and resusing their components across multiple sections
+    of the application as well.
+
+
+    React isn’t an MVC framework.
+    
+    React is a library for building composable user interfaces. It encourages the creation of reusable UI components which present data that changes over time.
+
+    React doesn’t use templates.
+
+    React approaches building user interfaces differently by breaking them into components. This means React uses a real, full-featured programming language to render views, which we see as an advantage over templates for a few reasons:
+
+        - JavaScript is a flexible, powerful programming language with the ability to build abstractions. This is incredibly important in large applications.
+
+        - By unifying your markup with its corresponding view logic, React can actually make views easier to extend and maintain.
+
+        - By baking an understanding of markup and content into JavaScript, there’s no manual string concatenation and therefore less surface area for XSS vulnerabilities.
+
+
+    
+    React updates are dead simple.
+    When your component is first initialized, the render method is called, generating a lightweight representation of your view. From that representation, a string of markup is produced and injected into the document. When your data changes, the render method is called again. In order to perform updates as efficiently as possible, we diff the return value from the previous call to render with the new one and generate a minimal set of changes to be applied to the DOM.
+
+    The data returned from render is neither a string nor a DOM node — it’s a lightweight description of what the DOM should look like.
+
+    We call this process reconciliation.
+
+    React updates the virtual DOM and compares it to the previous version of the virtual DOM. If a change has occurred, only that element is updated in the browser DOM. Changes on the browser DOM cause the displayed webpage to change.     
+
+
+    ## The Virtual DOM
+
+    React builds a representation of the browser Document Object Model or DOM in memory called the virtual DOM. As components are updated, React checks to see if the component’s HTML code in the virtual DOM matches the browser DOM. If a change is required, the browser DOM is updated. If nothing has changed, then no update is performed.
+    This is called the reconciliation.
+
+    Reconciliation process can be broken down into the following steps:
+
+    Step 1: The virtual DOM is updated.
+    Step 2: The virtual DOM is compared to the previous version of the virtual DOM and checks which elements have changed.
+    Step 3: The changed elements are updated in the browser DOM.
+    Step 4: The displayed webpage updates to match the browser DOM.
+
+
+    As updating the browser DOM can be a slow operation, this process helps to reduce the number of updates to the browser DOM by only updating when it is necessary.
+
+    But even with this process, if a lot of elements are updated by an event, pushing the update to the browser DOM can still be expensive and cause slow performance in the web application.
+
+    The React team invested many years of research into solving this problem. The outcome of that research is what’s known as the React Fiber Architecture.
+
+    ## React Fiber Architecture: 
+    
+    React can optimize when and where updates occur to the browser DOM to significantly improve application performance and responsiveness to user input. Think of it as a priority system. The highest priority changes, the elements visible to the user, are updated first. While lower priority changes, the elements not currently displayed, are updated later.
+
+
+    Imagine a really long web page in the web browser. If the user scrolls to the bottom, the top of the web page is no longer visible. The user then clicks a button on the bottom of the web page that updates some text on the top of the web page.
+
+    But the top of the page isn’t visible. Therefore, why update it immediately?
+
+    Perhaps there is text currently displayed on the bottom of the page that also updates when the button is clicked. Wouldn’t that be a higher priority to update than the non-visible text?
+
+    There are many tools available to help you investigate how React is processing your webpage. The official React Developer Tools web browser plugin developed by Meta will be one of the key tools in your developer toolbox. So, if you do have to look deeper into the code, you’ll have the right toolbox available to help you. These tools will be explored later on. 
